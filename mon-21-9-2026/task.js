@@ -17,14 +17,24 @@ console.log( "Orange" - "s");
 console.log( "4" + "8");
 // the output of concatenation is 48
 console.log( "4" - "8");
-// the output of concatenation is Oranges
+// the output of concatenation is -4
 console.log( "name" + 3);
+// the output of concatenation is name3
 console.log( "name" - 3);
+// the output of concatenation is not a number
 console.log( 82 * "word");
+// the output of concatenation is not a number
 console.log( 1 + "hello");
+// the output of concatenation is 1hello
 console.log( "hello" + 1);
+// the output of concatenation is hello1
 console.log( 1 + true);
+// the output of concatenation is 2
 console.log( "hello" + true);
+// the output of concatenation is hellotrue
 console.log( typeof (Infinity));
+// the output of concatenation is number
 console.log( 1 == '1');
+// the output of concatenation is true
 console.log( 1 === '1');
+// the output of concatenation is false
