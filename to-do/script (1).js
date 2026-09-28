@@ -34,14 +34,19 @@
    text  what the task says
    done  true if completed, false if not */
 
-let tasks = [
+let tasks = JSON.parse(localStorage.getItem("tasks")) || [
   { id: 1, text: "Check the rover battery", done: false },
   { id: 2, text: "Review the Mars landing map", done: true },
   { id: 3, text: "Brief Rania on the launch plan", done: false }
 ];
 
-// The id the NEXT new task will get. Increase it after every add.
-let nextId = 4;
+function saveTasks() {
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+let nextId = tasks.length > 0
+  ? Math.max(...tasks.map(task => task.id)) + 1
+  : 1;
 
 
 /* ============================================================
@@ -64,8 +69,7 @@ const taskList = document.getElementById("task-list");
 const emptyMsg = document.getElementById("empty-msg");
 const counter = document.getElementById("counter");
 const clearDone = document.getElementById("clear-done");
-
-
+const clearAll = document.getElementById("clear-all");
 
 
 
@@ -216,6 +220,7 @@ taskForm.addEventListener("submit", function(event){
    taskInput.value = "";
    charCount.textContent = "0 / 50";
    renderTasks();
+   saveTasks();
 } )
 
 /* ============================================================
@@ -261,6 +266,7 @@ taskList.addEventListener("click", function(event){
             task.done =!task.done;
         }
     }
+    saveTasks();
     renderTasks();
    }
 
@@ -272,6 +278,7 @@ taskList.addEventListener("click", function(event){
          }
       }
       tasks = newArray;
+      saveTasks()
       renderTasks();
     }
 
@@ -297,8 +304,17 @@ clearDone.addEventListener("click", function(){
       }
    }
    tasks = newArray;
+   saveTasks();
    renderTasks()
 })
+
+clearAll.addEventListener("click", function(){
+   tasks = [];
+
+   saveTasks();
+
+   renderTasks();
+});
 
 /* ============================================================
    BONUS CHALLENGES (for those who finish early)

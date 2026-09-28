@@ -518,5 +518,79 @@ console.log("Final Student Data:");
 console.table(finalStudentData);
 
 
+// Exercise 10 
+
+const backteckStudents = [
+    {id: 1,name:"ahmad", grade:77 },
+    {id: 2,name:"anas", grade:99 },
+    {id: 3,name:"omar", grade:45},
+    {id: 4,name:"saleh", grade:61 },
+    {id: 5,name:"salah", grade:48},
+    
+]
+
+const reportContainer = document.getElementById("reports");
+
+
+
+backteckStudents.forEach( (student => {
+    const status = student.grade >= 50 ? "pass" : "faild";
+
+    const report = `
+        <div class = "studentReport">
+        <h2>Students Report</h2>
+        <p> <strong>Name : </strong> ${student.name}.</p>
+        <p> <strong>ID : </strong> ${student.id}.</p>
+        <p> <strong>Grade : </strong> ${student.grade}.</p>
+        <p> <strong>Status : </strong> ${status}.</p>
+        </div>
+        <hr />
+    `;
+    reportContainer.innerHTML += report;
+
+}))
+
+
+//Exercise 11
+
+class person {
+    constructor(name, email){
+        this.name = name;
+        this.email = email;
+
+    }
+
+    getInfo(){
+        return `Name: ${this.name}, your email is : ${this.email}`
+    }
+}
+
+class student extends person{
+    constructor(name, email, major){
+        super(name, email)
+        this.major = major;
+
+    }
+}
+
+class Instructor extends person{
+    constructor (name, email, department){
+        super(name, email);
+        this.department = department;
+    }
+
+    getInfo(){
+        return `whelcome professor ${this.name}, your email is : ${this.email} , your new department is : ${this.department}`;
+    }
+}
+
+const person = new person("ahmed", "ahmed@example.com");
+
+const std = new student("salah", "salah@example.com", "CS");
+
+const professor = new Instructor("moath", "tarawneh@uni.edu", "IT")
+
+// Exercise 12
+
 
 
