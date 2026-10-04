@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>User Dashboard</title>
+
+<link
+    rel="stylesheet"
+    href="assets/css/dashboard.css"
+>
+
+
+</head>
+
+<body>
+
+
+<!-- ==========================================
+     HEADER
+=========================================== -->
+
+<header class="header">
+
+    <div class="header-left">
+
+        <h1>Dashboard</h1>
+
+    </div>
+
+
+    <div class="header-right">
+
+        <span id="headerUserName">
+            User
+        </span>
+
+        <button id="logoutBtn">
+            Logout
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- ==========================================
+     LAYOUT
+=========================================== -->
+
+<div class="layout">
+
+
+    <!-- ======================================
+         SIDEBAR
+    ======================================= -->
+
+    <aside class="sidebar">
+
+        <nav>
+
+            <a
+                href="#"
+                class="active"
+            >
+                Dashboard
+            </a>
+
+
+            <a href="#">
+                Profile
+            </a>
+
+
+            <a href="#">
+                Settings
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+
+    <!-- ======================================
+         MAIN CONTENT
+    ======================================= -->
+
+    <main class="main">
+
+
+        <!-- ==================================
+             WELCOME
+        =================================== -->
+
+        <section class="welcome">
+
+            <div>
+
+                <p class="welcome-label">
+                    Welcome back
+                </p>
+
+                <h2 id="welcomeName">
+                    User
+                </h2>
+
+                <p>
+                    Here is your account overview.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================
+             STATISTICS
+        =================================== -->
+
+        <section class="stats">
+
+
+            <div class="stat-card">
+
+                <span>
+                    Account
+                </span>
+
+                <strong>
+                    Active
+                </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>
+                    Role
+                </span>
+
+                <strong id="userRole">
+                    User
+                </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>
+                    Status
+                </span>
+
+                <strong>
+                    Online
+                </strong>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ==================================
+             ACCOUNT INFORMATION
+        =================================== -->
+
+        <section class="card">
+
+            <div class="card-header">
+
+                <h2>
+                    Account Information
+                </h2>
+
+                <p>
+                    Your current account details
+                </p>
+
+            </div>
+
+
+            <div class="user-info">
+
+
+                <div class="info-item">
+
+                    <span>
+                        Name
+                    </span>
+
+                    <strong id="userName">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span>
+                        Email
+                    </span>
+
+                    <strong id="userEmail">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span>
+                        Role
+                    </span>
+
+                    <strong id="userRoleInfo">
+                        -
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================
+             RECENT ACTIVITY
+        =================================== -->
+
+        <section class="card">
+
+            <div class="card-header">
+
+                <h2>
+                    Recent Activity
+                </h2>
+
+                <p>
+                    Your latest account activity
+                </p>
+
+            </div>
+
+
+            <div class="activity">
+
+                <div class="activity-item">
+
+                    <span class="activity-dot"></span>
+
+                    <div>
+
+                        <strong>
+                            Login successful
+                        </strong>
+
+                        <p>
+                            You are currently logged in.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="activity-item">
+
+                    <span class="activity-dot"></span>
+
+                    <div>
+
+                        <strong>
+                            Account active
+                        </strong>
+
+                        <p>
+                            Your account is active.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+
+<script src="assets/js/dashboard.js"></script>
+
+
+</body>
+
+</html>

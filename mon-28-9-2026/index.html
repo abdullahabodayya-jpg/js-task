@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Login & Signup</title>
+
+    <link
+        rel="stylesheet"
+        href="assets/css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <div class="wrapper">
+
+
+        <!-- ==========================================
+             TITLE
+        =========================================== -->
+
+        <div class="title-text">
+
+            <div class="title login">
+                Login Form
+            </div>
+
+            <div class="title signup">
+                Signup Form
+            </div>
+
+        </div>
+
+
+        <!-- ==========================================
+             FORM CONTAINER
+        =========================================== -->
+
+        <div class="form-container">
+
+
+            <!-- ==========================================
+                 LOGIN / SIGNUP CONTROLS
+            =========================================== -->
+
+            <div class="slide-controls">
+
+                <input
+                    type="radio"
+                    name="slide"
+                    id="login"
+                    checked
+                >
+
+                <input
+                    type="radio"
+                    name="slide"
+                    id="signup"
+                >
+
+
+                <label
+                    for="login"
+                    class="slide login"
+                >
+                    Login
+                </label>
+
+
+                <label
+                    for="signup"
+                    class="slide signup"
+                >
+                    Signup
+                </label>
+
+
+                <div class="slider-tab"></div>
+
+            </div>
+
+
+            <!-- ==========================================
+                 FORMS
+            =========================================== -->
+
+            <div class="form-inner">
+
+
+                <!-- ======================================
+                     LOGIN FORM
+                ======================================= -->
+
+                <form
+                    action="#"
+                    class="login"
+                >
+
+                    <div class="field">
+
+                        <input
+                            type="email"
+                            id="loginEmail"
+                            placeholder="Email Address"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <input
+                            type="password"
+                            id="loginPassword"
+                            placeholder="Password"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="pass-link">
+
+                        <a href="#">
+                            Forgot password?
+                        </a>
+
+                    </div>
+
+
+                    <div class="field btn">
+
+                        <div class="btn-layer"></div>
+
+                        <input
+                            type="submit"
+                            value="Login"
+                        >
+
+                    </div>
+
+
+                    <div class="signup-link">
+
+                        Not a member?
+
+                        <a href="#">
+                            Signup now
+                        </a>
+
+                    </div>
+
+                </form>
+
+
+                <!-- ======================================
+                     SIGNUP FORM
+                ======================================= -->
+
+                <form
+                    action="#"
+                    class="signup"
+                >
+
+                    <!-- Name -->
+
+                    <div class="field">
+
+                        <input
+                            type="text"
+                            id="signupName"
+                            placeholder="Name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Email -->
+
+                    <div class="field">
+
+                        <input
+                            type="email"
+                            id="signupEmail"
+                            placeholder="Email Address"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Password -->
+
+                    <div class="field">
+
+                        <input
+                            type="password"
+                            id="signupPassword"
+                            placeholder="Password"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Confirm Password -->
+
+                    <div class="field">
+
+                        <input
+                            type="password"
+                            id="signupConfirmPassword"
+                            placeholder="Confirm Password"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Submit -->
+
+                    <div class="field btn">
+
+                        <div class="btn-layer"></div>
+
+                        <input
+                            type="submit"
+                            value="Signup"
+                        >
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>
